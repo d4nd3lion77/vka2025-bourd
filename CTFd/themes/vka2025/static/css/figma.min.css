@@ -562,8 +562,8 @@ width: 260px;
     display: inline-block;
     width: 58%;
     height: 100%;
-    max-width: 80%; /* подстройка под нужный размер */
-    aspect-ratio: 16 / 9; /* или замените на fixed height, если нужно */
+    max-width: 80%;
+    aspect-ratio: 16 / 9;
     background-image: url('../img/png/blisnyashka_flag_1.png');
     background-size: cover;
     background-position: center;
@@ -1324,14 +1324,14 @@ width: 260px;
 .error {
     width: 100%;
     height: 1.5em;
-    color: #B2241C;
+    color: #000;
     margin-top: 1em;
     margin-bottom: -3em;
 }
 .error_log {
     width: 100%;
     height: 2em;
-    color: #B2241C;
+    color: #000;
     margin-top: 1em;
     margin-bottom: -2.5em;
 }
@@ -1438,7 +1438,7 @@ form#register,form#login {
   color: #fff;
   height: 100%;
   width: 80%;
-  margin-top: 0.5em;
+  margin-top: 2em;
   align-items: center;
 
 }
@@ -1476,7 +1476,7 @@ form#register,form#login {
   position: relative;
   display: inline-block;
   transition: all 0.3s ease;
-  margin-top: 1.2em;
+  margin-top: 2em;
 }
 
 .atomic-text {
@@ -1815,7 +1815,7 @@ form#register,form#login {
   min-height: 100vh;
   color: #B2241C; /* основной красный цвет */
   font-family: 'Blender-bold', sans-serif;
-  font-size: 20px !important;
+  font-size: 1.5em !important;
   text-align: center;
   text-transform: uppercase;
   margin: 0;
@@ -1917,14 +1917,17 @@ form#register,form#login {
   background: url('../img/box_red.jpg') no-repeat center center;
   background-size: cover;
   color: white;
-  width: 2em;
+  min-width: 2em; /* вместо width используем min-width */
   height: 2em;
+  padding: 0 0.5em; /* добавляем горизонтальный padding */
   text-align: center;
-  display: flex;
+  display: inline-flex; /* или flex, но не блоковый элемент */
   justify-content: center;
+  align-items: center; /* для вертикального выравнивания */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   font-family: Blender-Bold;
   text-transform: uppercase;
+  white-space: nowrap; /* предотвращаем перенос текста */
 }
 
 .middle-box {
@@ -1966,6 +1969,10 @@ form#register,form#login {
   align-items: center;
   color:#fff;
   font-size: 1vw;
+}
+
+.tables{
+  margin-top:2em;
 }
 
 .table_with_memb h1{
